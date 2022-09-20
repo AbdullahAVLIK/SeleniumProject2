@@ -45,9 +45,9 @@ public class C05_WindowHandle02 {
         //https://the-internet.herokuapp.com/windows adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
         //Sayfadaki textin “Opening a new window” olduğunu doğrulayın.
-
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Opening a new window']")).isDisplayed());
         //Sayfa başlığının(title) “The Internet” olduğunu doğrulayın.
+        Assert.assertTrue(driver.getTitle().contains("The Internet"));
         WebElement clickHere = driver.findElement(By.xpath("//*[text()='Click Here']"));
         //Click Here butonuna basın.
         clickHere.click();

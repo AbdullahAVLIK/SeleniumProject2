@@ -28,7 +28,7 @@ public class C04_CheckBoXTest {
 
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
         //      a. Verilen web sayfasına gidin.
         //      https://the-internet.herokuapp.com/checkboxes
         driver.get("https://the-internet.herokuapp.com/checkboxes");
@@ -36,19 +36,29 @@ public class C04_CheckBoXTest {
         WebElement checkBox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
         WebElement checkBox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
         //      c. Checkbox1 seçili değilse onay kutusunu tıklayın
+        Thread.sleep(3000);
         if (!checkBox1.isSelected()){
             checkBox1.click();
         }
+        Thread.sleep(3000);
         //      d. Checkbox2 seçili değilse onay kutusunu tıklayın
         if (!checkBox2.isSelected()){
+            checkBox2.click();
+        }
+        Thread.sleep(3000);
+        if (checkBox1.isSelected()){
+            checkBox1.click();
+        }
+        Thread.sleep(3000);
+        if (checkBox2.isSelected()){
             checkBox2.click();
         }
     }
 
     @After
     public void tearDown(){
-        driver.close();
+        //driver.close();
     }
 
-    //     */
+
 }
