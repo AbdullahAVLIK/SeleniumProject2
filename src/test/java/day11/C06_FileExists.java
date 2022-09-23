@@ -23,7 +23,7 @@ public class C06_FileExists {
         System.out.println(Files.exists(Paths.get(dosyaYolu)));
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
  */
-        String dosyaYolu = "C:\\Users\\Lenovo\\OneDrive\\Masaüstü\\text.txt";
+        String dosyaYolu = "C:\\Users\\ABDULLAH\\Downloads\\text.txt";
         //System.out.println(Files.exists(Paths.get(dosyaYolu)));
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
         /*
