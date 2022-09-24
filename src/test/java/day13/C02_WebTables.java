@@ -42,7 +42,7 @@ public class C02_WebTables extends TestBase_BeforeAfter {
         System.out.println(headers.getText());
         WebElement allBody = driver.findElement(By.xpath("//tbody"));
         System.out.println(allBody.getText());
-        /*List<WebElement> allheaders =driver.findElements(By.xpath("//tbody//tr//td"));
+        /*List<WebElement> allheaders =driver.findElements(By.xpath("//tbody//tr//td"));// --->tüm hücreler
         allheaders.stream().forEach(t-> System.out.print(t.getText()+"--*--"));*/
     }
     private void printRows() {

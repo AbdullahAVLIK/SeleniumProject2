@@ -54,11 +54,15 @@ public class C01_Cookie extends TestBase_BeforeAfter {
         driver.manage().deleteCookie(cookie1);
         Set<Cookie> allCookies1 = driver.manage().getCookies();
         allCookies1.stream().forEach(t -> System.out.println("name : " + t.getName() + " value :" + t.getValue()));
-        Assert.assertFalse(allCookies1.contains("skin"));
+
+        Cookie isim =driver.manage().getCookieNamed("skin");
+        Assert.assertFalse(allCookies1.contains(isim));
         //8-tum cookie’leri silin ve silindigini test edin
         driver.manage().deleteAllCookies();
         Set<Cookie> allCookies2 = driver.manage().getCookies();
         Assert.assertTrue(allCookies2.isEmpty());
+
+
 
     }
 }
