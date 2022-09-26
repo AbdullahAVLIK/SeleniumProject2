@@ -30,7 +30,7 @@ public class C03_ActionsClassHomeWork extends TestBase_BeforeClassAfterClass {
         //8- “Double click me" butonunu cift tiklayin
         WebElement box3 = driver.findElement(By.xpath("//div[@id='double-click']"));
         actions.doubleClick(box3).perform();
-        driver.close();
+
 
     }
 }
