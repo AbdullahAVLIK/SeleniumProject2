@@ -23,15 +23,15 @@ public class C03_DeleteExcel {
         //-Sheet objesi olusturun workbook.getSheetAt(Sayfa1)
         Sheet sheet = workbook.getSheet("Sayfa1");
         //-Row objesi olusturun sheet.getRow(3)
-        Row row = sheet.getRow(3);
+        Row row = sheet.getRow(0);
         //-Cell objesi olusturun row.getCell(3)
-        Cell cell = row.getCell(3);
+        Cell cell = row.getCell(4);
         //-3. Satır 3. Cell'deki veriyi silelim
         row.removeCell(cell);
         FileOutputStream fos = new FileOutputStream(dosyaYolu);
         workbook.write(fos);
         //-Silindiğini test edin
-        System.out.println(workbook.getSheet("Sayfa1").getRow(3).getCell(3).toString());
+       // System.out.println(workbook.getSheet("Sayfa1").getRow(3).getCell(3).toString());
 
 
     }

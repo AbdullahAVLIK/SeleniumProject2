@@ -8,6 +8,7 @@ import utilities.TestBase_BeforeClassAfterClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -17,11 +18,8 @@ public class C05_GetScreenshot extends TestBase_BeforeClassAfterClass {
         //amazon sayfasına gidip tüm sayfanın remini alalım
         driver.get("https://www.hepsiburada.com");
         TakesScreenshot ts = (TakesScreenshot) driver;
-        LocalDateTime date =LocalDateTime.now();
-        DateTimeFormatter formater = DateTimeFormatter.ofPattern("YYMMddHHmmss");
-        String tarih =date.format(formater);
         File tumSayfaResmi =ts.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/allPage"+tarih+" .jpeg"));
+        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntuleri/allPage_"+tarih+".jpeg"));
 
     }
 }
